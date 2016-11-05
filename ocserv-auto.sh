@@ -143,8 +143,8 @@ function ConfigOcserv {
         certtool --generate-privkey --outfile ca-key.pem
 
         cat << _EOF_ >ca.tmpl
-cn = "ocserv VPN"
-organization = "ocserv"
+cn = "Trust network"
+organization = "TNetwork"
 serial = 1
 expiration_days = 3650
 ca
@@ -158,8 +158,8 @@ _EOF_
         certtool --generate-privkey --outfile ${serverkey}
 
         cat << _EOF_ >server.tmpl
-cn = "ocserv VPN"
-organization = "ocserv"
+cn = "Trust network"
+organization = "TNetwork"
 serial = 2
 expiration_days = 3650
 signing_key
